@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="406.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jasigui.gui.NaloziController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="naloziTable" onContextMenuRequested="#onCMRequested" prefHeight="200.0" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn prefWidth="109.59997403621674" text="Id" />
+                  <TableColumn prefWidth="151.99994659423828" text="Status" />
+                  <TableColumn prefWidth="158.39996337890625" text="Datum zavrsetka" />
+                  <TableColumn prefWidth="246.39996337890625" text="Zaduzenje" />
+               </columns>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem fx:id="uslugeMenuItem" mnemonicParsing="false" onAction="#onClickUslugeMI" text="Usluge" />
+                       <MenuItem fx:id="artikliMenuItem" mnemonicParsing="false" onAction="#onClickArtikliMI" text="Artikli" />
+                        <MenuItem fx:id="obrisiMenuItem" mnemonicParsing="false" onAction="#onClickObrisiMI" text="Obrisi" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+            <Button mnemonicParsing="false" onAction="#onActionDodajNalog" prefWidth="150.0" text="Dodaj">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
